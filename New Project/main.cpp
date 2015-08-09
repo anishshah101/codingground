@@ -14,7 +14,10 @@ int main()
     Deck _deck; 
     _deck.print_Deck();
     std::cout << std::endl;
-    
+    //_deck.getOneCard();
+
+    //std::cout << std::endl;
+    //_deck.print_Deck();
     _deck.shuffle_Deck();
     _deck.print_Deck();
     std::cout << std::endl;

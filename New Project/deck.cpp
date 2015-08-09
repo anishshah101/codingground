@@ -47,10 +47,8 @@ void Deck::getHand()
     for (unsigned int i(0); i < 5; ++i)
     {
         m_hand.push_back(m_deck[i]);
-        //std::cout << m_hand[i].Card2Str() << " ";
     }
     
-    std::cout << std::endl;
     string s1 [5];
     string s=" ";
     
@@ -58,18 +56,19 @@ void Deck::getHand()
     {
         s=m_hand[i].Card2Str();
         s1[i]=s.substr(1);
-        std::cout << s1[i] << " ";
+        std::cout << m_hand[i].Card2Str() << " ";
     }
+    std::cout << std::endl;
 
     string swap=" ";
-    std::vector<Card> m_hand;
+    std::vector<Card> swap2;
       for (unsigned int i(0); i < 5; i++)
       {
         for (unsigned int j(0); j < 4-i; j++)
         {
           if (s1[j] > s1[j+1]) /* For decreasing order use < */
           {
-            string swap = s1[j];
+            swap = s1[j];
             s1[j]   = s1[j+1];
             s1[j+1] = swap;
             Card swap2 = m_hand[j];
@@ -81,15 +80,8 @@ void Deck::getHand()
       
       for (unsigned int i(0); i < 5; ++i)
     {
-        std::cout << m_deck[i].Card2Str() << " ";
+        std::cout << m_hand[i].Card2Str() << " ";
     }
-      
-      
-    
-    
-    /*for (unsigned int i(0); i < 5; ++i)
-    {
-        std::cout << foo[i] << " ";
-    }*/
+    std::cout << std::endl;
     
 }
